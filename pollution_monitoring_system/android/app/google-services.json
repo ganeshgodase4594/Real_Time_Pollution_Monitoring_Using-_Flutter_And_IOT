@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "590602525800",
+    "project_id": "pollution-monitoring-sys-b73eb",
+    "storage_bucket": "pollution-monitoring-sys-b73eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590602525800:android:85145675a57cc5b771efdd",
+        "android_client_info": {
+          "package_name": "com.example.pollution_monitoring_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590602525800-qk6qa3qsn8qc6u3kuuvl1bkt107807br.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pollution_monitoring_system",
+            "certificate_hash": "7061c4d1370ebd29091d143374b4253a8a17603f"
+          }
+        },
+        {
+          "client_id": "590602525800-cb6tm64ngt23756kn7vmme41hm35q5el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOLR0NhBm26z6fbg1aft4PUODhZJSnziM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590602525800-cb6tm64ngt23756kn7vmme41hm35q5el.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "590602525800-8erf9754tkk4026cfioou60vbp5dfahb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pollutionMonitoringSystem.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
