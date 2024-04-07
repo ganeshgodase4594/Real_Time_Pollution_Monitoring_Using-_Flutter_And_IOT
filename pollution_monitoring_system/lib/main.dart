@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:pollution_monitoring_system/firebase_options.dart';
 import 'package:pollution_monitoring_system/src/authentication/login.dart';
-import 'package:pollution_monitoring_system/src/search/ai.dart';
 import 'package:pollution_monitoring_system/src/taskbar/taskmain.dart';
 
 Future<void> main() async {

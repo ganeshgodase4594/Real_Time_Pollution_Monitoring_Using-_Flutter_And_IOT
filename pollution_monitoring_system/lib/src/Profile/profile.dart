@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -155,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen>
                     horizontal: 10.0), // Adjust the horizontal spacing
                 child: Tab(
                   child: Text(
-                    "About",
+                    "Contact us",
                     style: TextStyle(fontSize: 20, color: Colors.black54),
                   ),
                 ),
@@ -165,10 +166,10 @@ class _HomeScreenState extends State<HomeScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: const [
+              children:  [
                 SingleChildScrollView(child: DetailsScreen()),
                 CallsScreen(),
-                AboutScreen(),
+                ContactScreen(),
               ],
             ),
           ),
@@ -307,7 +308,7 @@ class _ChatScreenState extends State<DetailsScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "Aditya jitendra Kaldhone",
+                            "Ganesh Subhash Godase",
                             style: GoogleFonts.lato(
                               textStyle: const TextStyle(
                                 fontSize: 18.0, // Set the font size
@@ -359,7 +360,7 @@ class _ChatScreenState extends State<DetailsScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "adityaKaldhone1357@gmail.com",
+                            "godaseganesh4594@gmail.com",
                             style: GoogleFonts.lato(
                               textStyle: const TextStyle(
                                 fontSize: 17.0, // Set the font size
@@ -418,7 +419,7 @@ class _ChatScreenState extends State<DetailsScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "9653415546",
+                            "8767206494",
                             style: GoogleFonts.lato(
                               textStyle: const TextStyle(
                                 fontSize: 17.0, // Set the font size
@@ -473,7 +474,7 @@ class _ChatScreenState extends State<DetailsScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "06/08/2002",
+                            "13/05/2002",
                             style: GoogleFonts.lato(
                               textStyle: const TextStyle(
                                 fontSize: 17.0, // Set the font size
@@ -497,25 +498,58 @@ class _ChatScreenState extends State<DetailsScreen> {
   }
 }
 
-class AboutScreen extends StatefulWidget {
-  const AboutScreen({super.key});
+
+class ContactScreen extends StatefulWidget{
 
   @override
-  // ignore: library_private_types_in_public_api
-  _AboutScreenState createState() => _AboutScreenState();
+  State<ContactScreen> createState() => _ContactScreenState();
+
 }
 
-class _AboutScreenState extends State<AboutScreen> {
+class _ContactScreenState extends State<ContactScreen>{
+
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            
-          )
-          )
-      ],
+  Widget build(BuildContext context){
+    return Scaffold(
+      backgroundColor: Colors.blue.shade50,
+      body: SingleChildScrollView(
+        child: Column(
+          
+          children: [
+            const SizedBox(height: 10,),
+            ContactUs(
+              
+              logo:  const AssetImage("assets/images/gana.jpg",),
+              email: "godaseganesh4594@gmail.com",
+              companyName: "Ganesh Godase",
+              dividerThickness: 5,
+              phoneNumber: "+91 8767206494",
+              githubUserName: "ganeshgodase4594",
+              linkedinURL: "https://www.linkedin.com/in/ganesh-godase-3aba1a21b/",
+              twitterHandle: "https://twitter.com/GaneshG40108564",
+              instagram: "https://www.instagram.com/godase.g_a_n_a/",
+              textColor: Colors.black,
+              cardColor: Colors.white,
+              taglineColor: Colors.white,
+              companyColor: Colors.black,
+              avatarRadius: 65,
+            ),
+            Container(
+              color:Colors.teal.shade300 ,
+              child: Center(
+                child: Text(
+                  textAlign: TextAlign.center,
+                    "Designed And Developed by Ganesh Godase and It's team",
+                    style: GoogleFonts.hankenGrotesk(
+                      color:Colors.white,
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+              ),
+            ),
+          ],
+        ),
+      )
+
     );
   }
 }

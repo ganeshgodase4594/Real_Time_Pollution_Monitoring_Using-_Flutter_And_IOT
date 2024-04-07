@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pollution_monitoring_system/src/Profile/profile.dart';
+import 'package:pollution_monitoring_system/src/dashboard/Notification.dart';
 import 'package:pollution_monitoring_system/src/dashboard/dashboard.dart';
 import 'package:pollution_monitoring_system/src/search/ai.dart';
 import 'package:pollution_monitoring_system/src/taskbar/taskbar.dart';
@@ -42,10 +43,10 @@ class _MyAppState extends State<TaskMain> {
               selectedColor: Colors.purple,
             ),
 
-            /// Likes
+            /// Notifications
             SalomonBottomBarItem(
-              icon: const Icon(Icons.favorite_border),
-              title: const Text("Likes"),
+              icon: const Icon(Icons.notification_add),
+              title: const Text("Notifications"),
               selectedColor: Colors.pink,
             ),
 
@@ -72,13 +73,13 @@ class _MyAppState extends State<TaskMain> {
       case 0:
         return const DashBoard();
       case 1:
-        return const DashBoard();
+        return const AlertSystemScreen();
       case 2:
         return  const Home();
       case 3:
         return const WhatsAppHome();
       default:
-        return Container(); // Empty container for unsupported index
+        return Container();
     }
   }
 }
